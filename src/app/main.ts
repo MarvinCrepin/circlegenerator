@@ -1,8 +1,8 @@
-import Board from "./Board";
+import Board from "./Board.js";
 import BoardConfig from "./interfaces/Board/BoardConfig";
 
 const config: BoardConfig = {
-  samples: 10,
+  samples: 50,
   multiplicationFactor: 2,
 };
 const board = new Board();
