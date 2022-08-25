@@ -1,5 +1,3 @@
-"use strict";
-
 const svgns = "http://www.w3.org/2000/svg";
 const container = document.querySelector("svg g.samples");
 const x0: number = 50;
