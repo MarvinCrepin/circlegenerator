@@ -7,7 +7,7 @@ const x0 = 50;
 const y0 = 50;
 const r0 = 45;
 const svgns = "http://www.w3.org/2000/svg";
-const r = 1;
+const r = 0.01;
 
 export const getPositionFromAngle = (angle: number): Point => {
   const x = x0 + r0 * Math.cos(angle);
@@ -52,8 +52,13 @@ export const setAttributeNbr = (
   return element.setAttributeNS(null, key, String(value));
 };
 
-export const drawLine = (firstPoint: Point, secondPoint: Point) => {
-  const container = querySelector("svg g.lines");
-  container.appendChild(createLineElement(firstPoint, secondPoint));
-  return container;
+export const drawLine = (
+  firstPoint: Point,
+  secondPoint: Point,
+  index: number
+) => {
+  setTimeout(function (index) {
+    const container = querySelector("svg g.lines");
+    container.appendChild(createLineElement(firstPoint, secondPoint));
+  }, index * 50);
 };

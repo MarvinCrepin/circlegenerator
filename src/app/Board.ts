@@ -6,7 +6,7 @@ import {
   getAngleFromIndex,
   getPositionFromAngle,
   querySelector,
-} from "./utils.js";
+} from "./utils";
 
 export default class Board {
   private config: BoardConfig = {
@@ -45,6 +45,6 @@ export default class Board {
     );
     const firstPoint: Point = getPositionFromAngle(firstAngle);
     const secondPoint: Point = getPositionFromAngle(secondAngle);
-    drawLine(firstPoint, secondPoint);
+    drawLine(firstPoint, secondPoint, index);
   }
 }

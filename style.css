@@ -11,6 +11,8 @@ body {
 main {
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-top: 5%;
 }
 h1 {
   text-align: center;
@@ -20,30 +22,52 @@ h1 {
 svg {
   height: 30em;
   width: 60em;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(4.6px);
+  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(4.6px);
-  border: 0.5px solid rgba(255, 255, 255, 0.3);
 }
 
 svg circle {
-  fill: rgba(137, 15, 30, 0.89);
-  stroke-width: 0.01em;
+  fill: rgb(12, 10, 10);
   /* From https://css.glass */
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(18.2px);
   -webkit-backdrop-filter: blur(18.2px);
-  stroke: 1px solid rgba(137, 15, 30, 0.3);
 }
 
 g.samples circle {
-  fill: black;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 g.lines line {
-  stroke: black;
+  stroke: white;
   stroke-width: 0.02em;
+}
+
+@keyframes append-animate {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+line {
+  animation: fadeIn 1s;
 }
